@@ -1,0 +1,191 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    /* */
+    margin: 0;
+    padding: 0; /*Убирает внешние и внутренние отступы.*/
+    font-family: 'Roboto', sans-serif; /*Устанавливает шрифт для всего документа.*/
+    background-color: var(--cream); /*Устанавливает цвет фона.*/
+    color: var(--autumn-brown); /*Устанавливает цвет текста.*/
+    overflow-x: hidden; /*Скрывает горизонтальную прокрутку.*/
+}
+
+/* Установите отступы, чтобы содержимое не попадало по краям */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Установите ширину для элементов ввода формы, так как по умолчанию они имеют ширину 100% */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* стили для помощников по проверке */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/*     */
+:root {
+    --autumn-orange: #D2691E;
+    --autumn-brown: #8B4513;
+    --autumn-yellow: #DAA520;
+    --autumn-red: #B22222;
+    --cream: #FFF8DC;
+}
+
+body, html {
+    margin: 0;
+    padding: 0; /*Убирает внешние и внутренние отступы.*/
+    font-family: 'Roboto', sans-serif; /*Устанавливает шрифт для всего документа.*/
+    background-color: var(--cream); /*Устанавливает цвет фона.*/
+    color: var(--autumn-brown); /*Устанавливает цвет текста.*/
+    overflow-x: hidden; /*Скрывает горизонтальную прокрутку.*/
+}
+
+.header {
+    height: 100vh; /*Устанавливает высоту заголовка равной высоте экрана.*/
+    background: linear-gradient(135deg, var(--autumn-orange), var(--autumn-red));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*Центрирует содержимое по вертикали и горизонтали.(и выше)*/
+    position: relative;
+    overflow: hidden; /*Позволяет использовать абсолютное позиционирование внутри заголовка и скрывает переполнение.*/
+}
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+.highlight-text {
+    font-weight: bold;
+    color: var(--autumn-orange);
+}
+
+
+/* Стили для навигационной панели */
+
+.navbar {
+    min-height: 80px; /* Уменьшаем высоту навигационной панели */
+    background: linear-gradient(135deg, var(--autumn-orange), var(--autumn-red)); /*Устанавливает цвет фона.*/
+}
+
+.navbar-brand {
+    padding: 0; /* Убираем внутренние отступы */
+    height: 80px; /* Высота блока с логотипом */
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-brand img {
+        height: auto; /* Сохраняем пропорции логотипа */
+        max-height: 60px; /* Уменьшаем высоту логотипа, сохраняя пропорции */
+        display: inline-block; /* Убедимся, что изображение отображается корректно */
+    }
+
+.navbar-nav > li > a {
+    padding-top: 20px; /* Уменьшаем отступы сверху для ссылок */
+    padding-bottom: 10px; /* Уменьшаем отступы для ссылок */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: var(--cream);
+    margin: 1rem 0; /*Устанавливает внешние отступы.*/
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/*на главной странице было голубое окошко*/
+.jumbotron {
+    padding: 60px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #FFECC7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #D2691E;
+    border-color: #B22222;
+}
+
+.back-link {
+    color: orangered;
+}
+
+    .back-link:hover {
+        color: firebrick; /* или другой цвет, который вы хотите использовать при наведении */
+    }
+
+
+h5 { /*для авторов комментариев*/
+    color: #DAA520;
+}
+
+.carousel-inner .item {  /*для карусели*/
+    text-align: center;
+}
+
+    .carousel-inner .item img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+.custom-img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 2px 0px 10px 4px;
+    float: right; /* Выравнивание по правому краю */
+}
+
+    /*position: relative;*/ /* Добавляем position: relative для правильного позиционирования ::before */
+    /*z-index: 1;*/ /* Устанавливаем z-index для текста */
+/*}
+
+    .jumbotron::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('C:/Users/HP/Desktop/Django/DjangoWebProject1/DjangoWebProject1/app/static/app/content/главная.jpg');*/ /* Указываем путь к вашему изображению */
+        /*background-size: cover;*/ /* Масштабируем изображение, чтобы оно покрывало весь блок */
+        /*background-position: center;*/ /* Центрируем изображение */
+        /*opacity: 0.5;*/ /* Устанавливаем прозрачность */
+        /*z-index: -1;*/ /* Устанавливаем z-index для фонового изображения */
+    /*}*/

@@ -1,0 +1,29 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+{% load static %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Полезные ссылки, чтоб ты был(а) в порядке</h1>
+
+<br />
+<a href="https://t.me/aesthpoetry" target="_blank">
+    <img src="{% static 'app/content/icon-telegram.png' %}" alt="Logo 1" />
+</a>
+<span>Эстетическая поэзия</span>
+<!-- Добавьте больше ссылок по аналогии     -->
+<a href="https://vk.com/diary_of__my_soul" target="_blank">
+    <img src="{% static 'app/content/icon-vk.png' %}" alt="Logo 2" />
+</a>
+<span>Дневник моей души</span>
+<a href="https://au.pinterest.com/aatymtaev/coffee-эстетика/" target="_blank">
+    <img src="{% static 'app/content/icon-pinterest.png' %}" alt="Logo 3" />
+</a>
+<span>Coffee эстетика</span>
+{% endblock %}
