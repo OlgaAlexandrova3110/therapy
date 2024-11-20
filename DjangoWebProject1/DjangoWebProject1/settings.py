@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', #для подключения обработчика загрузки файлов
+                'django.template.context_processors.media', #РґР»СЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»РѕРІ
             ],
         },
     },
@@ -113,5 +113,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  #определение переменных для загрузки графических файлов в папку media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  #РѕРїСЂРµРґРµР»РµРЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… РґР»СЏ Р·Р°РіСЂСѓР·РєРё РіСЂР°С„РёС‡РµСЃРєРёС… С„Р°Р№Р»РѕРІ РІ РїР°РїРєСѓ media
 MEDIA_URL = '/media/'
